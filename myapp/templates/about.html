@@ -1,2 +1,32 @@
-<h1>About</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet rerum itaque fugiat eum saepe voluptatum et quaerat deserunt magnam, possimus eaque ullam eos laborum, tenetur fuga culpa vitae rem. Maxime, accusantium. Dolore voluptate saepe non debitis molestiae reiciendis dolor sit aut rerum omnis. Inventore aspernatur at esse quia rerum aliquid assumenda minus consequatur vel in labore ipsam eveniet ex quam tempora, eos iusto reiciendis sapiente vitae maxime doloribus. Laudantium id quis nobis reprehenderit culpa aliquid commodi autem aperiam deserunt, a officia facilis vel eos alias repudiandae nemo voluptatum sunt provident debitis eius inventore nisi doloremque et? Minus maiores officiis vel aliquam consequuntur harum, quo quisquam minima rerum. Vel, dignissimos. Deleniti recusandae obcaecati nihil. Harum voluptatem modi excepturi, minima nam enim architecto, eaque a non dolor quod, inventore corrupti saepe. Dicta repudiandae cumque necessitatibus nihil, officiis saepe optio quasi voluptatem cum at aut libero vel voluptatibus. Mollitia veniam nemo praesentium possimus, harum eos asperiores accusamus minus corrupti quam ipsam voluptatem dolore assumenda repellendus eum quibusdam molestias, maxime iusto sequi exercitationem culpa temporibus blanditiis architecto excepturi. Vero aperiam labore corrupti laborum tenetur recusandae architecto animi officia? Voluptate culpa incidunt consequuntur molestias id eos atque, tenetur dolorem sequi est, dicta, nesciunt magnam. Alias, iusto animi maxime neque deserunt quas illo debitis cupiditate maiores porro dolor! Quisquam voluptatum perspiciatis quis vero placeat, quae consequatur tenetur dignissimos magnam autem blanditiis nobis facere nemo, suscipit voluptatibus nihil. Amet cumque nisi ab maiores id nobis mollitia, ipsa ut consequatur quisquam ipsum et cupiditate architecto vel error fugiat explicabo eos. Tempore recusandae fugiat voluptas veniam, blanditiis odit dolor modi labore illo eum? Suscipit modi illo laborum in! Nostrum eius ut dolore ad, amet possimus molestiae voluptatem nesciunt enim doloribus assumenda explicabo deleniti quidem cum voluptatibus veritatis est ratione dignissimos. Vel sit fugiat quibusdam dolore reprehenderit exercitationem maiores similique.</p>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

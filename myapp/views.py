@@ -5,7 +5,10 @@ from .models import Project, Task
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    title = 'Welcome to Django Course!!'
+    return render(request, 'index.html', {
+        'title': title
+    })
 
 def hello(request, username):
     print(username)

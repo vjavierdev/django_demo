@@ -19,10 +19,17 @@ def about(request):
 
 def projects(request):
     projects = list(Project.objects.values())
-    return JsonResponse(projects, safe=False)
+    return render(request, 'projects.html', {
+        'projects': projects
+})
 
-def tasks(request, id):
-    task = get_object_or_404(Task, id=id)
-    return HttpResponse('Tasks: %s' % task.title)
+def tasks(request):
+
+    tasks = list(Task.objects.all())
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+})
+    ##task = get_object_or_404(Task, id=id)
+    ##return HttpResponse('Tasks: %s' % task.title)
 
 
